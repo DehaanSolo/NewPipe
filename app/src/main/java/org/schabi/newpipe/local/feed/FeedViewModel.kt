@@ -156,7 +156,7 @@ class FeedViewModel(
     fun getShowFutureItemsFromPreferences() = getShowFutureItemsFromPreferences(application)
 
     fun setSaveShowShortsItems(showShortsItems: Boolean) {
-        this.showFutureItems.onNext(showShortsItems)
+        this.showShortsItems.onNext(showShortsItems)
         PreferenceManager.getDefaultSharedPreferences(application).edit {
             this.putBoolean(application.getString(R.string.feed_show_shorts_items_key), showShortsItems)
             this.apply()
